@@ -1,0 +1,27 @@
+@import "../colors/colors";
+@import "../mixin/mixin";
+
+.btn {
+    background-color: $orange;
+    padding: 1em 0.7em;
+    color: $white-ish;
+    border-radius: 9999px;
+    width: 10em;
+    flex-shrink: 0;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Chivo";
+    letter-spacing: 0.05em;
+    margin: 1em 0;
+    @include clamping(.8rem,3vw ,1.2rem );
+    border: 1px solid $orange;
+    &:hover {
+      background-color: transparent;
+    }
+    @media(min-width:556px){
+     
+      padding: 1em .5em;
+     
+    }
+  }

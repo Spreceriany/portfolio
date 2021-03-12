@@ -1,0 +1,72 @@
+body {
+  font-family: "Asul", "Chivo", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  max-width: 90em;
+  margin: 0 auto;
+  min-height: 8vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  nav {
+    min-height: 8vh;
+    display: flex;
+    align-items: center;
+    top: 0;
+    right: 0;
+    ul {
+      margin-left: auto;
+      li {
+        display: inline-block;
+        padding: 1.5em;
+        font-size: 1.5rem;
+        a {
+          width: 100%;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background: black;
+    animation: grain 8s steps(10) infinite;
+    &::after{
+        content: "";
+        /* The grainy image */
+        background-image: url("../img/repeated-square-dark.png");
+        /* Specify a height and width above and beyond the page header for movement */
+        
+        height: 300%;
+        left: -50%;
+        opacity: 0.3;
+        position: fixed;
+        top: -100%;
+        width: 300%;
+    }
+}
+
+@keyframes grain {
+    0%, 100% { transform:translate(0, 0) }
+    10% { transform:translate(-5%, -10%) }
+    20% { transform:translate(-15%, 5%) }
+    30% { transform:translate(7%, -25%) }
+    40% { transform:translate(-5%, 25%) }
+    50% { transform:translate(-15%, 10%) }
+    60% { transform:translate(15%, 0%) }
+    70% { transform:translate(0%, 15%) }
+    80% { transform:translate(3%, 35%) }
+    90% { transform:translate(-10%, 10%) }
+  }

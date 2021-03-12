@@ -1,0 +1,23 @@
+body{
+    font-family: 'Asul','Chivo', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    width: 100%;
+    min-height: 8vh;
+    display: flex;
+    align-items: center;
+    ul{
+        margin-left: auto;
+        li{
+            display: inline-block;
+            padding: 1em;
+        }
+    }
+}

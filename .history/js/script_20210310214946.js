@@ -1,0 +1,12 @@
+var elem = document.querySelector(".carousel");
+var flkty = new Flickity(elem, {
+  contain: true,
+
+  prevNextButtons: true,
+  pageDots: true,
+  cellAlign: "left",
+  contain: true,
+  wrapAround:true,
+ arrowShape:"M0.646454 3.64645C0.451192 3.84171 0.451192 4.15829 0.646454 4.35355L3.82843 7.53553C4.0237 7.7308 4.34028 7.7308 4.53554 7.53553C4.7308 7.34027 4.7308 7.02369 4.53554 6.82843L1.70711 4L4.53554 1.17157C4.7308 0.976311 4.7308 0.659728 4.53554 0.464466C4.34028 0.269204 4.0237 0.269204 3.82843 0.464466L0.646454 3.64645ZM101 3.5L1.00001 3.5V4.5L101 4.5V3.5Z"
+});
+

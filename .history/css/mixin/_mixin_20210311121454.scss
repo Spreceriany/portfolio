@@ -1,0 +1,13 @@
+
+@mixin clamping($min, $mid, $max) {
+    font-size: clamp($min, $mid, $max);
+  }
+  
+  @mixin grid($breakpoint){
+    display:grid;
+    grid-template-columns: 1fr;
+    @media(min-width:$breakpoint){
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  

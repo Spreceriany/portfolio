@@ -1,0 +1,100 @@
+@import "../colors/colors";
+@import "../mixin/mixin";
+
+.contact{
+    width: 100%;
+    padding: 5em 0 10em 2em;
+    background: $black;
+    color: $white-ish;
+    display: grid;
+    grid-template-columns: 1fr;
+    @media(min-width:556px){
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    
+    &__left-col{ 
+      margin-bottom: 2em;
+      font-family: 'Asul';
+      padding: 0em 2em;
+      @media(max-width:556px){
+        padding: 0;
+      }
+      h3{
+        @include clamping(2rem, 5vw, 3rem);
+        
+  
+        .orange{
+          
+          font-weight: bold;
+         
+  
+        }
+      }
+    }
+  
+    &__right-col{
+      display: flex;
+      flex-direction: column;
+      @media(max-width:556px){
+        padding:0;
+      }
+      padding: 0em 2em;
+  
+      small{
+        @include clamping(.9rem,3vw ,1.5rem );
+        margin-bottom: .2em ;
+      }
+  
+      svg {
+        width: 100%;
+        height: 100%;
+        fill: none;
+        stroke: #edf2f8;
+        stroke-width: 7;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        transition: stroke 0.3s, transform 0.3s ease-in;
+        &:hover {
+          stroke: $orange !important;
+          transform: translateY(-4px);
+        }
+      }
+  
+      ul {
+        list-style-type: none;
+        li {
+          display: inline-flex;
+          width: 3em;
+          @media(min-width:556px){
+            width: 4em;
+            margin-bottom: 1.5em;
+          }
+          img {
+            width: 100%;
+          }
+        }
+      }
+  
+      a{
+        @include clamping(1.5rem, 5vw, 2rem);
+        position: relative;
+        display: inline-block;
+        color: $orange;
+        overflow: hidden;
+        background: linear-gradient(to right, $orange, $orange 50%, $white-ish 50%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 100%;
+        background-position: 100%;
+        transition: background-position 275ms ease;
+        text-decoration: none;
+        font-family: 'Chivo';
+        &:hover {
+          background-position: 0 100%;
+        }
+      }
+    }
+  }

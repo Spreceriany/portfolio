@@ -1,0 +1,90 @@
+@import "/css/colors/colors";
+@import "/css/mixin/mixin";
+
+header {
+    max-width: 1440px;
+    margin: 0 auto;
+    min-height: 13vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 2;
+    nav {
+      min-height: 10vh;
+      display: flex;
+      align-items: center;
+      top: 0;
+      right: 0;
+  
+      .burger {
+        cursor: pointer;
+        margin-right: 2em;
+        @media (min-width: 996px) {
+          display: none;
+        }
+        div {
+          background-color: $orange;
+          margin: 0.3em;
+          transition: transform 500ms ease, opacity 500ms ease, width 500ms ease;
+          &:nth-child(1) {
+            width: 1.5em;
+            height: 0.2em;
+          }
+          &:nth-child(2) {
+            width: 1em;
+            height: 0.2em;
+          }
+  
+          &:nth-child(3) {
+            width: 0.6em;
+            height: 0.2em;
+          }
+        }
+      }
+  
+      ul {
+        margin-left: auto;
+        display: none;
+        @media (min-width: 992px) {
+          display: block;
+        }
+  
+        li {
+          display: inline-block;
+          padding: 0.5em 2em;
+          font-size: 1.5rem;
+          text-transform: uppercase;
+          cursor: pointer;
+  
+          &:last-of-type {
+            border: 2px solid $orange;
+            border-radius: 9999px;
+            background-image: linear-gradient($orange, $orange);
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: 0% 100%;
+            transition: background-size 0.3s;
+            margin-right: 4em;
+            &:hover {
+              background-size: 100% 100%;
+            }
+          }
+  
+          &:not(:last-child) a:hover {
+            color: $orange;
+          }
+          a {
+            width: 100%;
+            text-decoration: none;
+            color: $white-ish;
+            letter-spacing: 0.1em;
+            transition: color 0.3s ease-out;
+          }
+        }
+      }
+    }
+  }
+  

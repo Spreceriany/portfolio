@@ -1,0 +1,106 @@
+@import "button/button";
+@import "colors/colors";
+@import "./mixin/mixin";
+@import "./components/header";
+@import "./components/hero";
+@import "./components/about";
+@import "./components/work";
+@import "./components/contact";
+
+body {
+  font-family: "Asul", "Chivo", sans-serif;
+  margin: auto;
+  max-width: 1920px;
+  overflow-x: hidden;
+  background: radial-gradient(
+    59.93% 44.1% at -11.63% 36.77%,
+    #343434 0%,
+    #111111 100%
+  );
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+main {
+  margin: 0 auto;
+  background-color: black;
+}
+
+
+
+
+
+
+
+.carousel{
+  width:100%;
+  height:50vh;
+  @media(min-width:1212px){
+    height: 70vh;
+  }
+ 
+}
+
+
+
+
+.flickity-viewport{
+  height: 100% !important;
+}
+
+
+
+.flickity-prev-next-button{
+  top: 8% !important;
+  width: 27px !important;
+  height: 27px !important;
+  border-radius: 50% !important;
+  transform: translateY(-50%);
+  margin: 0 1em;
+
+  @media(min-width:556px){
+    margin:0 2em;
+    width: 35px !important;;
+    height: 35px !important;
+  }
+}
+
+.flickity-button {
+  position: absolute;
+  background: transparent !important;
+  border: 1px solid $gray !important;
+  color: $gray !important;
+}
+
+.flickity-button-icon:focus-within, .flickity-button-icon:hover{
+  color: $orange;
+}
+
+.block:hover .block-image{
+  opacity: .5;
+
+}
+
+.block:hover::before{
+  content: 'See project';
+  position: absolute;
+  width: 14%;
+  height: 2%;
+  top: 38%;
+  color: #edf2f8;
+  border: 1px solid #edf2f8;
+  left: 0;
+  z-index: 10;
+  padding: 1em .6em;
+  text-align: center;
+  left: 41%;
+}

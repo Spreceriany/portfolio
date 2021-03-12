@@ -1,0 +1,153 @@
+body {
+  font-family: "Asul", "Chivo", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+$white-ish:#EDF2F8;
+$orange:#FF441D;
+$gray:#AAAAAA;
+
+.orange{
+  color: $orange;
+}
+
+.gray{
+  color:$gray
+}
+
+
+header {
+  width: 100%;
+  max-width: 120em;
+  margin: 0 auto;
+  min-height: 13vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  padding-right: 4em;
+  justify-content: flex-end;
+  nav {
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    top: 0;
+    right: 0;
+    ul {
+      margin-left: auto;
+      display: none;
+      @media(min-width:992px){
+        display: block;
+      }
+      li {
+        display: inline-block;
+        padding: .5em 2em;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        cursor: pointer;
+      
+        &:last-of-type{
+          border: 2px solid $orange;
+          border-radius: 9999px;
+          background-image: linear-gradient($orange,$orange);
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          background-size: 0% 100%;
+          transition: background-size .3s;
+          &:hover{
+            background-size: 100% 100%;
+          }
+        }
+
+        &:not(:last-child) a:hover{
+            color: $orange;
+        }
+        a {
+          width: 100%;
+          text-decoration: none;
+          color: $white-ish;
+          letter-spacing: .1em;
+          transition: color .3s ease-out;
+        }
+      }
+    }
+  }
+}
+
+
+main{
+    margin: 0 auto;
+    background-color: black;
+}
+
+.btn{
+  background-color: $orange;
+  padding: .7em 1em;
+  color: $white-ish;
+  border-radius: 9999px;
+  width: 10em;
+  flex-shrink: 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Chivo';
+  letter-spacing: .05em;
+}
+
+.hero{
+  width: 100%;
+  max-width: 120em;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: linear-gradient(90.58deg, #21212B 7.37%, rgba(0, 0, 0, 0.88) 117.59%);
+  display: grid; 
+  align-items: center;
+  justify-content: center;
+  color: $white-ish;
+  grid-template-columns: 1fr;
+
+  @media(min-width:556px){
+    grid-template-columns: 1fr 1fr;
+  }
+  &__left-col{
+    display: flex;
+    flex-direction: column;
+    padding-left: 4em;
+    ul{
+      list-style-type: none;
+      li{
+        display: inline-flex;
+        width: 2em;
+        img{
+          width: 100%;
+        }
+      }
+    }
+
+    p{
+      font-size: clamp(1rem,3vw,2.5rem);
+    }
+
+    h1{
+      font-size: clamp(2rem,5vw,6rem);
+      margin-bottom: .1em;
+    }
+  }
+
+  &__right-col{
+    position: relative;
+
+    img{
+      position: absolute;
+      width: 50vw;
+      top:0;
+    }
+  }
+}
+

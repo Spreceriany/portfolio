@@ -1,0 +1,54 @@
+body {
+  font-family: "Asul", "Chivo", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  max-width: 100em;
+  margin: 0 auto;
+  min-height: 8vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  nav {
+    min-height: 8vh;
+    display: flex;
+    align-items: center;
+    top: 0;
+    right: 0;
+    ul {
+      margin-left: auto;
+      li {
+        display: inline-block;
+        padding: 1.5em;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        a {
+          width: 100%;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+
+main{
+    margin: 0 auto;
+    background-color: black;
+}
+
+.hero{
+  width: 100%;
+  max-width: 100em;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: linear-gradient(90.58deg, #21212B 7.37%, rgba(0, 0, 0, 0.88) 117.59%);}
+

@@ -1,0 +1,76 @@
+@import "../colors/colors";
+@import "../mixin/mixin";
+
+.carousel {
+  width: 100%;
+  height: 50vh;
+  @media (min-width: 1212px) {
+    height: 70vh;
+  }
+}
+
+.flickity-viewport {
+  height: 100% !important;
+}
+
+.flickity-prev-next-button {
+  top: 8% !important;
+  width: 27px !important;
+  height: 27px !important;
+  border-radius: 50% !important;
+  transform: translateY(-50%);
+  margin: 0 1em;
+
+  @media (min-width: 556px) {
+    margin: 0 2em;
+    width: 35px !important;
+    height: 35px !important;
+  }
+}
+
+.flickity-button {
+  position: absolute;
+  background: transparent !important;
+  border: 1px solid $gray !important;
+  color: $gray !important;
+}
+
+.flickity-button-icon{
+    transition: color .3s ease;
+}
+
+.flickity-button-icon {
+
+    &:hover, &:focus-within{
+        color: $orange;
+    }
+  
+}
+
+.block-image{
+    transition: opacity .3s ease;
+
+}
+
+
+.block:hover .block-image {
+  opacity: 0.5;
+}
+
+
+
+.block:hover::before {
+  content: "See project";
+  position: absolute;
+  width: 14%;
+  height: 2%;
+  top: 38%;
+  color: #edf2f8;
+  border: 1px solid #edf2f8;
+  left: 0;
+  z-index: 10;
+  padding: 1em 0.6em;
+  text-align: center;
+  left: 41%;
+  font-family: "Chivo";
+}

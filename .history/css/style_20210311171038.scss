@@ -1,0 +1,30 @@
+@import "button/button";
+@import "colors/colors";
+@import "./mixin/mixin";
+@import "./components/header";
+@import "./components/hero";
+@import "./components/about";
+@import "./components/work";
+@import "./components/contact";
+@import "./components/carousel";
+
+body {
+  font-family: "Asul", "Chivo", sans-serif;
+  margin: auto;
+  max-width: 1440px;
+  overflow-x: hidden;
+  background: $black;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  margin: 0 auto;
+  background-color: black;
+}

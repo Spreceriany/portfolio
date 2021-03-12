@@ -1,0 +1,34 @@
+@import "../colors/colors";
+@import "../mixin/mixin";
+
+
+.about {
+    width: 100%;
+    padding: 5em 0 10em 0;
+    background-color: #111111;
+    color: $white-ish;
+    display: grid;
+   
+
+    @include grid(556px);
+    &__left-col {
+      padding: 0 2em;
+      h2 {
+        font-family: "Chivo";
+        @include clamping(2rem, 5vw, 6rem);
+        margin-bottom: 0.5em;
+      }
+      p{
+        @include clamping(1.2rem, 3vw, 2rem);
+        &:first-of-type{
+          margin-bottom: .5em;
+        }
+      }
+
+      .bold{
+        font-family: "Chivo";
+      }
+    }
+  
+  
+  }

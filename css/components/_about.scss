@@ -1,0 +1,35 @@
+@import "../colors/colors";
+@import "../mixin/mixin";
+
+
+.about {
+    width: 100%;
+    padding-top: 5em;
+    background-color: $more-black;
+    color: $white-ish;
+    display: grid;
+    @media(min-width:556px){
+      background-color: $black;
+    }
+    @include grid(556px);
+    &__left-col {
+      padding: 0 2em;
+      h2 {
+        font-family: "Chivo";
+        @include clamping(2rem, 5vw, 6rem);
+        margin-bottom: 0.2em;
+      }
+      p{
+        @include clamping(1.2rem, 3vw, 2rem);
+        &:first-of-type{
+          margin-bottom: .5em;
+        }
+      }
+
+      .bold{
+        font-family: "Chivo";
+      }
+    }
+  
+  
+  }

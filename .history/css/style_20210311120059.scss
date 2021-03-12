@@ -1,0 +1,533 @@
+$white-ish: #edf2f8;
+$orange: rgb(201, 35, 0);
+$gray: #b5b5b5;
+$black: #111111;
+
+body {
+  font-family: "Asul", "Chivo", sans-serif;
+  margin: auto;
+  max-width: 1920px;
+  overflow-x: hidden;
+  background: radial-gradient(
+    59.93% 44.1% at -11.63% 36.77%,
+    #343434 0%,
+    #111111 100%
+  );
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.orange {
+  color: $orange;
+}
+
+.gray {
+  color: $gray;
+}
+
+@mixin clamping($min, $mid, $max) {
+  font-size: clamp($min, $mid, $max);
+}
+
+@mixin grid($breakpoint){
+  display:grid;
+  grid-template-columns: 1fr;
+  @media(min-width:$breakpoint){
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+header {
+  max-width: 1440px;
+  margin: 0 auto;
+  min-height: 13vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 2;
+  nav {
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    top: 0;
+    right: 0;
+
+    .burger {
+      cursor: pointer;
+      margin-right: 2em;
+      @media (min-width: 996px) {
+        display: none;
+      }
+      div {
+        background-color: $orange;
+        margin: 0.3em;
+        transition: transform 500ms ease, opacity 500ms ease, width 500ms ease;
+        &:nth-child(1) {
+          width: 1.5em;
+          height: 0.2em;
+        }
+        &:nth-child(2) {
+          width: 1em;
+          height: 0.2em;
+        }
+
+        &:nth-child(3) {
+          width: 0.6em;
+          height: 0.2em;
+        }
+      }
+    }
+
+    ul {
+      margin-left: auto;
+      display: none;
+      @media (min-width: 992px) {
+        display: block;
+      }
+
+      li {
+        display: inline-block;
+        padding: 0.5em 2em;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &:last-of-type {
+          border: 2px solid $orange;
+          border-radius: 9999px;
+          background-image: linear-gradient($orange, $orange);
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          background-size: 0% 100%;
+          transition: background-size 0.3s;
+          margin-right: 4em;
+          &:hover {
+            background-size: 100% 100%;
+          }
+        }
+
+        &:not(:last-child) a:hover {
+          color: $orange;
+        }
+        a {
+          width: 100%;
+          text-decoration: none;
+          color: $white-ish;
+          letter-spacing: 0.1em;
+          transition: color 0.3s ease-out;
+        }
+      }
+    }
+  }
+}
+
+main {
+  margin: 0 auto;
+  background-color: black;
+}
+
+.btn {
+  background-color: $orange;
+  padding: 1em 0.7em;
+  color: $white-ish;
+  border-radius: 9999px;
+  width: 10em;
+  flex-shrink: 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Chivo";
+  letter-spacing: 0.05em;
+  margin: 1em 0;
+  @include clamping(.8rem,3vw ,1.2rem );
+  &:hover {
+    background-color: transparent;
+  }
+  @media(min-width:556px){
+   
+    padding: 1em .5em;
+   
+  }
+}
+
+.hero {
+  width: 100%;
+
+  margin: 0 auto;
+  min-height: 80vh;
+  @media(min-width:556px){
+    max-height: 100vh;
+  }
+  background: radial-gradient(
+    59.93% 44.1% at -11.63% 36.77%,
+    #343434 0%,
+    #111111 100%
+  );
+  @media(min-width:556px){
+    background: radial-gradient(23.93% 35.1% at 0.37% 40.77%, #343434 0%, #111111 100%);
+  }
+  align-items: center;
+  color: $white-ish;
+  position: relative;
+  @include grid(556px);
+
+  &__left-col {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2em;
+    padding-top: 4em;
+    ul {
+      list-style-type: none;
+      li {
+        display: inline-flex;
+        width: 2em;
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    p {
+      @include clamping(1rem, 3vw, 2rem);
+    }
+
+    h1 {
+      @include clamping(2rem, 5vw, 6rem);
+      margin-bottom: 0.1em;
+      letter-spacing: 0.03em;
+      font-family: "Chivo";
+    }
+  }
+
+  &__right-col {
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      left: 0;
+      box-shadow: inset 0 -10px 10px -10px #000000;
+      @media(min-width:556px){
+        box-shadow: none;
+      }
+    }
+    img {
+      position: absolute;
+      width: 70%;
+      right: 0;
+      bottom: 0;
+      @media(min-width:556px){
+        max-width: 90%;
+        object-fit: contain;
+        height: 80%;
+        left:0;
+        right: auto;
+      }
+    }
+  }
+}
+
+.about {
+  width: 100%;
+  padding: 5em 0 10em 0;
+  background-color: #111111;
+  color: $white-ish;
+  display: grid;
+  
+  @include grid(556px);
+  &__left-col {
+    padding: 0 2em;
+    h2 {
+      font-family: "Chivo";
+      @include clamping(2rem, 5vw, 6rem);
+      margin-bottom: 0.5em;
+    }
+    p{
+      @include clamping(1.2rem, 3vw, 2rem);
+    }
+  }
+
+
+}
+
+.work {
+  width: 100%;
+  padding: 5em 0;
+  position: relative;
+  background-color: $black;
+  padding-left: 2em;
+  h2 {
+    color: $white-ish;
+    font-family: "Chivo";
+    
+    @include clamping(2rem, 5vw, 6rem);
+  
+  }
+  &__item {
+    position: relative;
+    width: 69%;
+    height: 100%;
+    margin-right: 2em;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2em;
+
+    
+    .link{
+      opacity:0;
+      position: absolute;
+      top: 100%;
+      left: 24%;
+      text-decoration: none;
+      color: $white-ish;
+      border:1px solid $white-ish;
+    }
+
+    
+    .block{
+      height: 100%;
+    }
+    .block:hover {
+      .link{
+        opacity:1;
+        z-index: 5;
+      }
+
+     
+       
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      position: relative;
+    }
+    &:nth-child(odd) img {
+      filter: drop-shadow(-17px 31px 25px rgb(32, 32, 32));
+    }
+    &:nth-child(even) img {
+      filter: drop-shadow(20px 31px 25px rgb(32, 32, 32));
+    }
+
+    small {
+      display: block;
+      color: $gray;
+      font-size: clamp(0.8rem, 3vw, 1.5rem);
+    }
+    h2 {
+      color: $white-ish;
+      font-family: "Asul";
+      letter-spacing: 0.02em;
+      padding-left: 0;
+      font-weight: normal;
+      @include clamping(1.7rem, 5vw, 6rem);
+    }
+
+    h3{
+      @include clamping(1.7rem, 5vw, 4rem);
+      color: $white-ish;
+      position: relative;
+      display: inline-block;
+      color: $orange;
+      overflow: hidden;
+      background: linear-gradient(to right, $orange, $orange 50%, $white-ish 50%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% 100%;
+      background-position: 100%;
+      transition: background-position 275ms ease;
+      text-decoration: none;
+      &:hover {
+        background-position: 0 100%;
+      }
+    }
+
+    small,
+    h3 {
+      position: absolute;
+      margin-top: 1.5em;
+      top: 74%;
+      padding-left: 2em;
+
+      @media(min-width:1000px){
+        margin-top:  0.8em;
+      }
+    }
+  }
+}
+
+.carousel{
+  width:100%;
+  height:50vh;
+  @media(min-width:1212px){
+    height: 70vh;
+  }
+ 
+}
+
+
+
+
+.flickity-viewport{
+  height: 100% !important;
+}
+
+.contact{
+  width: 100%;
+  padding: 5em 0 10em 0em;
+  background: $black;
+  color: $white-ish;
+  display: grid;
+  grid-template-columns: 1fr;
+  @media(min-width:556px){
+    grid-template-columns: 1fr 1fr;
+  }
+
+  
+  &__left-col{ 
+    margin-bottom: 2em;
+    font-family: 'Asul';
+    padding: 0em 2em;
+    @media(max-width:556px){
+      padding: 0;
+    }
+    h3{
+      @include clamping(2rem, 5vw, 3rem);
+      
+
+      .orange{
+        
+        font-weight: bold;
+       
+
+      }
+    }
+  }
+
+  &__right-col{
+    display: flex;
+    flex-direction: column;
+    @media(max-width:556px){
+      padding:0;
+    }
+    padding: 0em 2em;
+
+    small{
+      @include clamping(.9rem,3vw ,1.5rem );
+      margin-bottom: .2em ;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: none;
+      stroke: #edf2f8;
+      stroke-width: 7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+      transition: stroke 0.3s, transform 0.3s ease-in;
+      &:hover {
+        stroke: $orange !important;
+        transform: translateY(-2px);
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      li {
+        display: inline-flex;
+        width: 3em;
+        @media(min-width:556px){
+          width: 4em;
+          margin-bottom: 1.5em;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    a{
+      @include clamping(1.5rem, 5vw, 2rem);
+      position: relative;
+      display: inline-block;
+      color: $orange;
+      overflow: hidden;
+      background: linear-gradient(to right, $orange, $orange 50%, $white-ish 50%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% 100%;
+      background-position: 100%;
+      transition: background-position 275ms ease;
+      text-decoration: none;
+      font-family: 'Chivo';
+      &:hover {
+        background-position: 0 100%;
+      }
+    }
+  }
+}
+
+.flickity-prev-next-button{
+  top: 8% !important;
+  width: 27px !important;
+  height: 27px !important;
+  border-radius: 50% !important;
+  transform: translateY(-50%);
+  margin: 0 1em;
+
+  @media(min-width:556px){
+    margin:0 2em;
+    width: 35px !important;;
+    height: 35px !important;
+  }
+}
+
+.flickity-button {
+  position: absolute;
+  background: transparent !important;
+  border: 1px solid $gray !important;
+  color: $gray !important;
+}
+
+.flickity-button-icon:focus-within, .flickity-button-icon:hover{
+  color: $orange;
+}
+
+.block-image{
+  position: relative;
+  &::after{
+   
+  }
+}
+
+.block:hover::before{
+  content: 'See project';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  color: $white-ish;
+  border: 1px solid $white-ish;
+  left:0;
+}
