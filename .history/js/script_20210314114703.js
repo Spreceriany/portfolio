@@ -174,15 +174,25 @@ abouts.forEach(scrollAbout =>{
   gsap.from(scrollAbout,{
     y:30,
     autoAlpha:0,
-    duration:1,
+    duration:1.5,
     ease: Back.easeOut.config(1),
     scrollTrigger:{
-      trigger: ".scroll-about",
-      start:"top 70%",
-      markers:true
-    }
+    trigger: ".about__left-col h2",
+    start:"top 70%",
+  }
   })
 })
+
+// gsap.from(".scroll-about",{
+//   y:30,
+//   autoAlpha:0,
+//   duration:1.5,
+//   ease: Back.easeOut.config(1),
+//   scrollTrigger:{
+//     trigger: ".about__left-col h2",
+//     start:"top 70%",
+//   }
+// })
 
 /**Work */
 
@@ -193,6 +203,7 @@ gsap.from(".title",{
   ease:"power1.out",
   scrollTrigger:{
     trigger: ".title",
+
     start:"top 80%"
   }
 })
@@ -201,21 +212,17 @@ gsap.from(".title",{
 
 /**Contact */
 
-const h3s = gsap.utils.toArray(".contact__left-col h3");
-h3s.forEach( h3 =>{
-  gsap.from(h3,{
-    autoAlpha:0,
-    duration:1,
-    ease: Back.easeOut.config(1),
+gsap.from(".contact__left-col",{
+  autoAlpha:0,
+  duration:1,
+  ease: Back.easeOut.config(1),
 
-    x:-20,
-    scrollTrigger:{
+  x:-20,
+  scrollTrigger:{
     trigger: ".contact__left-col",
     start:"top 80%"
   }
-  })
 })
-
 
 gsap.from(".contact-stagger",{
   stagger:.2,

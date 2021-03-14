@@ -11,8 +11,8 @@
       color: $white-ish;
       font-family: "Chivo";
       padding-bottom: .5em;
-      @include clamping(2.5rem, 5vw, 6rem);
-    
+      @include clamping(2rem, 5vw, 6rem);
+      
     
     }
 
@@ -69,7 +69,14 @@
         color: $gray;
         font-size: clamp(0.8rem, 3vw, 1.5rem);
       }
-    
+      h2 {
+        color: $white-ish;
+        font-family: "Asul";
+        letter-spacing: 0.02em;
+        padding-left: 0;
+        font-weight: normal;
+        @include clamping(2.5rem, 5vw, 6rem);
+      }
   
       h3{
         @include clamping(1.7rem, 5vw, 4rem);

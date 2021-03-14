@@ -265,7 +265,7 @@ header nav ul li a {
 }
 
 .hero__left-col h1 {
-  font-size: clamp(2rem, 5vw, 6rem);
+  font-size: clamp(2.5rem, 5vw, 6rem);
   margin-bottom: 0.1em;
   letter-spacing: 0.03em;
   font-family: "Chivo";
@@ -368,7 +368,7 @@ header nav ul li a {
 
 .about__left-col h2 {
   font-family: "Chivo";
-  font-size: clamp(2rem, 5vw, 6rem);
+  font-size: clamp(2.5rem, 5vw, 6rem);
   margin-bottom: 0.2em;
 }
 
@@ -403,7 +403,7 @@ header nav ul li a {
   color: #edf2f8;
   font-family: "Chivo";
   padding-bottom: .5em;
-  font-size: clamp(2rem, 5vw, 6rem);
+  font-size: clamp(2.5rem, 5vw, 6rem);
 }
 
 .work .title {
@@ -467,15 +467,6 @@ header nav ul li a {
   display: block;
   color: #b5b5b5;
   font-size: clamp(0.8rem, 3vw, 1.5rem);
-}
-
-.work__item h2 {
-  color: #edf2f8;
-  font-family: "Asul";
-  letter-spacing: 0.02em;
-  padding-left: 0;
-  font-weight: normal;
-  font-size: clamp(1.7rem, 5vw, 6rem);
 }
 
 .work__item h3 {
@@ -547,7 +538,7 @@ header nav ul li a {
 }
 
 .contact__left-col {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   font-family: 'Asul';
   padding: 0em 2em;
 }
