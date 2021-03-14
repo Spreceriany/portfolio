@@ -178,9 +178,8 @@ abouts.forEach(scrollAbout =>{
     ease: Back.easeOut.config(1),
     scrollTrigger:{
       trigger: ".scroll-about",
-      start:"bottom 50%",
-      end:"+=300",
-      markers:true
+      start:"bottom 70%",
+      end:"+=300"
     }
   })
 })
@@ -194,8 +193,7 @@ gsap.from(".title",{
   ease:"power1.out",
   scrollTrigger:{
     trigger: ".title",
-    start:"bottom 80%",
-    
+    start:"bottom 80%"
   }
 })
 
