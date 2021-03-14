@@ -19,6 +19,7 @@
   
     
     &__left-col{ 
+      margin-bottom: 1em;
       font-family: 'Asul';
       padding: 0em 2em;
    
@@ -29,10 +30,6 @@
       .underline{
         background-image: url("/img/brush-stroke-banner-6.svg");
         background-size: contain;
-        background-position: 0% 100%;
-        background-repeat: no-repeat;
-        height: 2em;
-        display: inline-block;
       }
     }
   

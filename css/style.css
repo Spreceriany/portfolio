@@ -538,7 +538,6 @@ header nav ul li a {
 }
 
 .contact__left-col {
-  margin-bottom: 1em;
   font-family: 'Asul';
   padding: 0em 2em;
 }
@@ -547,8 +546,13 @@ header nav ul li a {
   font-size: clamp(2rem, 5vw, 2.5rem);
 }
 
-.contact__left-col h3 .orange {
-  font-weight: bold;
+.contact__left-col .underline {
+  background-image: url("/img/brush-stroke-banner-6.svg");
+  background-size: contain;
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  height: 2em;
+  display: inline-block;
 }
 
 .contact__right-col {
