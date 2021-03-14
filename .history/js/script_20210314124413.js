@@ -179,7 +179,6 @@ abouts.forEach(scrollAbout =>{
     scrollTrigger:{
       trigger: ".scroll-about",
       start:"bottom 70%",
-      end:"+=300",
       markers:true
     }
   })

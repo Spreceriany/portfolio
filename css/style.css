@@ -701,10 +701,8 @@ header nav ul li a {
 .block:hover::before {
   content: "See project";
   position: absolute;
-  top: 38%;
   color: #edf2f8;
   border: 1px solid #edf2f8;
-  left: 0;
   z-index: 10;
   padding: 1em 1.5em;
   text-align: center;
@@ -714,6 +712,16 @@ header nav ul li a {
   left: 41%;
   font-family: "Chivo";
   font-size: 1.2rem;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media (max-width: 556px) {
+  .block:hover::before {
+    font-size: .8rem;
+  }
 }
 
 .orange {

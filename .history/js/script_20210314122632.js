@@ -114,7 +114,7 @@ burger.addEventListener("click", () => {
   t1.reversed() ? (t1.play(),bodyOverflow()) : (t1.reverse(.7), bodyOverflow());
 });
 
-
+/**Loading */
 
 
 
@@ -178,9 +178,7 @@ abouts.forEach(scrollAbout =>{
     ease: Back.easeOut.config(1),
     scrollTrigger:{
       trigger: ".scroll-about",
-      start:"bottom 70%",
-      end:"+=300",
-      markers:true
+      start:"top 70%",
     }
   })
 })
@@ -242,8 +240,6 @@ gsap.from(".contact-stagger2",{
     start:"top 80%",
   }
 })
-
-/**Loading */
 
 gsap.to(".first",1.5,{
   delay:.5,
