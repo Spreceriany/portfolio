@@ -303,7 +303,7 @@ header nav ul li a {
   bottom: 0;
   -webkit-filter: saturate(0);
           filter: saturate(0);
-  background-image: url("/img/26432.svg");
+  background-image: url("/img/comic-dots.svg");
   background-size: 60%;
   background-repeat: no-repeat;
   background-position: 100% 65%;
@@ -535,6 +535,7 @@ header nav ul li a {
   background: #0d0d0d;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
+  position: relative;
 }
 
 @media (min-width: 556px) {
@@ -552,7 +553,7 @@ header nav ul li a {
 }
 
 .contact__left-col h3 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(2rem, 5vw, 2.5rem);
 }
 
 .contact__left-col h3 .orange {
@@ -787,12 +788,19 @@ header nav ul li a {
   }
 }
 
+@media (prefers-color-scheme: light) {
+  h1, h2, h3, p {
+    -webkit-filter: invert(1) hue-rotate(180);
+            filter: invert(1) hue-rotate(180);
+  }
+}
+
 body {
   font-family: "Asul", "Chivo", sans-serif;
   margin: auto;
   max-width: 1440px;
   overflow-x: hidden;
-  background: #111111;
+  background: #111010;
 }
 
 html {
@@ -811,5 +819,39 @@ html {
 main {
   margin: 0 auto;
   background-color: black;
+}
+
+.loading {
+  position: absolute;
+  z-index: 600;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+}
+
+.first {
+  background: #0d0d0d;
+  left: 0%;
+}
+
+.second {
+  background: #0d0d0d;
+  left: 33.3%;
+}
+
+.third {
+  background: #0d0d0d;
+  left: 66.6%;
+}
+
+@media (prefers-color-scheme: dark) {
+  h1, h2, h3, p {
+    -webkit-filter: invert(1) hue-rotate(180);
+            filter: invert(1) hue-rotate(180);
+  }
+}
+
+.orange-dot {
+  display: inline-block;
 }
 /*# sourceMappingURL=style.css.map */

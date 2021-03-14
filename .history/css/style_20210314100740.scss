@@ -16,7 +16,7 @@ body {
   margin: auto;
   max-width: 1440px;
   overflow-x: hidden;
-  background: #111010;
+  background: $black;
 
 }
 
@@ -67,9 +67,5 @@ main {
   h1,h2,h3,p{
       filter: invert(1) hue-rotate(180);
   }
-}
-
-.orange-dot{
-  display: inline-block;
 }
 

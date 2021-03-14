@@ -16,7 +16,7 @@ body {
   margin: auto;
   max-width: 1440px;
   overflow-x: hidden;
-  background: #111010;
+  background: $black;
 
 }
 
@@ -63,13 +63,9 @@ main {
   left: 66.6%;
 }
 
-@media (prefers-color-scheme:dark){
+@media (prefers-color-scheme:light){
   h1,h2,h3,p{
       filter: invert(1) hue-rotate(180);
   }
-}
-
-.orange-dot{
-  display: inline-block;
 }
 

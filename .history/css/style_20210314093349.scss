@@ -8,15 +8,17 @@
 @import "./components/contact";
 @import "./components/carousel";
 @import "./components/overlay";
-@import "./misc/dark-mode";
 
+:root{
+  filter: invert(100%) hue-rotate(180);
+}
 
 body {
   font-family: "Asul", "Chivo", sans-serif;
   margin: auto;
   max-width: 1440px;
   overflow-x: hidden;
-  background: #111010;
+  background: $black;
 
 }
 
@@ -61,15 +63,5 @@ main {
 .third{
   background: $more-black;
   left: 66.6%;
-}
 
-@media (prefers-color-scheme:dark){
-  h1,h2,h3,p{
-      filter: invert(1) hue-rotate(180);
-  }
 }
-
-.orange-dot{
-  display: inline-block;
-}
-

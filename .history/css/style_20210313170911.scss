@@ -8,15 +8,13 @@
 @import "./components/contact";
 @import "./components/carousel";
 @import "./components/overlay";
-@import "./misc/dark-mode";
-
 
 body {
   font-family: "Asul", "Chivo", sans-serif;
   margin: auto;
   max-width: 1440px;
   overflow-x: hidden;
-  background: #111010;
+  background: $black;
 
 }
 
@@ -49,27 +47,17 @@ main {
 
 .first{
   background: $more-black;
-  left: 0%;
+  left: 33.3%;
 }
 
 .second{
   background: $more-black;
-  
-  left: 33.3%;
+  left: 66.6%;
+
 }
 
 .third{
   background: $more-black;
-  left: 66.6%;
-}
+  left: 99.9%;
 
-@media (prefers-color-scheme:dark){
-  h1,h2,h3,p{
-      filter: invert(1) hue-rotate(180);
-  }
 }
-
-.orange-dot{
-  display: inline-block;
-}
-

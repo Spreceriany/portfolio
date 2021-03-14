@@ -116,21 +116,36 @@ burger.addEventListener("click", () => {
 
 /**Loading */
 
+gsap.to(".first",1.5,{
+  delay:.5,
+  top:"-100%",
+  ease:Expo.easeInOut
+})
 
+gsap.to(".second",1.5,{
+  delay:.7,
+  top:"-100%",
+  ease:Expo.easeInOut
+})
+
+gsap.to(".third",1.5,{
+  delay:.9,
+  top:"-100%",
+  ease:Expo.easeInOut
+})
 
 
 /**hero section with header*/
 
 window.onload = () =>{
   const t3 = gsap.timeline({
-    defaults: {  ease: Back.easeOut.config(1)}
+    defaults: {  ease: Back.easeOut.config(1),delay:1}
   })
 
 t3.from("nav ul li",{
   stagger:.3,
   y:-20,
-  autoAlpha:0,
-  delay:1
+  autoAlpha:0
 })
 
 .from(".burger",{
@@ -177,7 +192,7 @@ gsap.from(".scroll-about",{
   ease: Back.easeOut.config(1),
   scrollTrigger:{
     trigger: ".about__left-col h2",
-    start:"bottom 70%",
+    start:"bottom 70%"
   }
 })
 
@@ -187,7 +202,6 @@ gsap.from(".title",{
   y:30,
   autoAlpha:0,
   duration:1,
-  ease:"power1.out",
   scrollTrigger:{
     trigger: ".title",
 
@@ -234,24 +248,6 @@ gsap.from(".contact-stagger2",{
     trigger:".contact-stagger",
     start:"top bottom",
   }
-})
-
-gsap.to(".first",1.5,{
-  delay:.5,
-  top:"-100%",
-  ease: "expo.inOut"
-})
-
-gsap.to(".second",1.5,{
-  delay:.7,
-  top:"-100%",
-  ease: "expo.inOut"
-})
-
-gsap.to(".third",1.5,{
-  delay:.9,
-  top:"-100%",
-  ease: "expo.inOut"
 })
 
 

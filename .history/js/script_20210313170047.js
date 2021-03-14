@@ -114,9 +114,6 @@ burger.addEventListener("click", () => {
   t1.reversed() ? (t1.play(),bodyOverflow()) : (t1.reverse(.7), bodyOverflow());
 });
 
-/**Loading */
-
-
 
 
 /**hero section with header*/
@@ -129,8 +126,7 @@ window.onload = () =>{
 t3.from("nav ul li",{
   stagger:.3,
   y:-20,
-  autoAlpha:0,
-  delay:1
+  autoAlpha:0
 })
 
 .from(".burger",{
@@ -177,7 +173,7 @@ gsap.from(".scroll-about",{
   ease: Back.easeOut.config(1),
   scrollTrigger:{
     trigger: ".about__left-col h2",
-    start:"bottom 70%",
+    start:"bottom 70%"
   }
 })
 
@@ -187,7 +183,6 @@ gsap.from(".title",{
   y:30,
   autoAlpha:0,
   duration:1,
-  ease:"power1.out",
   scrollTrigger:{
     trigger: ".title",
 
@@ -195,15 +190,20 @@ gsap.from(".title",{
   }
 })
 
+gsap.from(".carousel",{
+  autoAlpha:0,
+  scrollTrigger:{
+    trigger: ".carousel",
 
+    start:"top 80%"
+  }
+})
 
 /**Contact */
 
 gsap.from(".contact__left-col",{
   autoAlpha:0,
   duration:1,
-  ease: Back.easeOut.config(1),
-
   x:-20,
   scrollTrigger:{
     trigger: ".contact__left-col",
@@ -215,7 +215,7 @@ gsap.from(".contact-stagger",{
   stagger:.2,
   autoAlpha:0,
   y:30,
-  ease: Back.easeOut.config(1),
+  ease:"power4.in",
   duration:1,
   scrollTrigger:{
     trigger:".contact-stagger",
@@ -229,29 +229,10 @@ gsap.from(".contact-stagger2",{
   autoAlpha:0,
   ease:"power4.in",
   duration:.5,
-  ease: Back.easeOut.config(1),
   scrollTrigger:{
     trigger:".contact-stagger",
     start:"top bottom",
   }
-})
-
-gsap.to(".first",1.5,{
-  delay:.5,
-  top:"-100%",
-  ease: "expo.inOut"
-})
-
-gsap.to(".second",1.5,{
-  delay:.7,
-  top:"-100%",
-  ease: "expo.inOut"
-})
-
-gsap.to(".third",1.5,{
-  delay:.9,
-  top:"-100%",
-  ease: "expo.inOut"
 })
 
 

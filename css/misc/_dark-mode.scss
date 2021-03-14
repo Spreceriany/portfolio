@@ -1,0 +1,6 @@
+
+@media (prefers-color-scheme:light){
+    h1,h2,h3,p{
+        filter: invert(1) hue-rotate(180);
+    }
+}

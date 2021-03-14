@@ -15,7 +15,10 @@
       background: $black;
     }
 
-   
+    .divider{
+      position: absolute;
+      left:50%;
+    }
   
     
     &__left-col{ 

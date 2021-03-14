@@ -15,7 +15,19 @@
       background: $black;
     }
 
-   
+    .divider{
+      position: absolute;
+      margin: 0 auto;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      height: .7em;
+      @media(max-width:556px){
+        display: none;
+      }
+    }
   
     
     &__left-col{ 
