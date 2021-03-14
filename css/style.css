@@ -438,6 +438,10 @@ header nav ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .work__item .block:hover .link {
@@ -496,9 +500,9 @@ header nav ul li a {
 .work__item small,
 .work__item h3 {
   position: absolute;
-  margin-top: 1.5em;
-  top: 50%;
   padding-left: 2em;
+  top: 60%;
+  margin-top: 1em;
 }
 
 @media (min-width: 1000px) {
