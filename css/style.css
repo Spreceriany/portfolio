@@ -216,7 +216,7 @@ header nav ul li a {
 
 @media (min-width: 556px) {
   .hero {
-    max-height: 100vh;
+    min-height: 100vh;
   }
 }
 
