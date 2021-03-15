@@ -1,16 +1,43 @@
 gsap.registerPlugin(ScrollTrigger)
 
-var elem = document.querySelector(".carousel");
-var flkty = new Flickity(elem, {
+let tickerSpeed = 2;
 
+let flickity = null;
+let isPaused = false;
+const slideshowEl = document.querySelector('.carousel');
+//
+//   Functions
+//
+//////////////////////////////////////////////////////////////////////
+
+const pause = () => {
+  isPaused = true;
+};
+
+const play = () => {
+  if (isPaused) {
+    isPaused = false;
+    window.requestAnimationFrame(update);
+  }
+};
+
+
+
+flickity = new Flickity(slideshowEl, {
+  autoPlay: false,
   prevNextButtons: true,
   pageDots: false,
-  cellAlign: "left",
-  contain: true,
-  wrapAround:true,
+  draggable: true,
+  wrapAround: true,
   selectedAttraction: 0.015,
   friction: 0.25
 });
+flickity.x = 0;
+
+flickity.on('dragStart', () => {
+  isPaused = true;
+});
+
 
 
 

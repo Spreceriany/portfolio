@@ -8,8 +8,8 @@ var flkty = new Flickity(elem, {
   cellAlign: "left",
   contain: true,
   wrapAround:true,
-  selectedAttraction: 0.015,
-  friction: 0.25
+  selectedAttraction: 0.03,
+  friction: 0.30
 });
 
 
