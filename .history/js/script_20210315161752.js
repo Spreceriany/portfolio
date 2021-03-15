@@ -54,7 +54,7 @@ contactBtn.addEventListener("click",() =>{
 
 /*Overlay*/ 
 const t1 = gsap.timeline({
-  defaults: { duration: .7,     ease: "back.out(1.7)",},
+  defaults: { duration: .7, ease: Back.easeOut.config(1) },
 });
 
 const t2 = gsap.timeline({defaults: {duration: .1}});
@@ -119,8 +119,7 @@ burger.addEventListener("click", () => {
 
 window.onload = () =>{
   const t3 = gsap.timeline({
-    defaults: {     ease: "back.out(1.7)",
-  }
+    defaults: {  ease: Back.easeOut.config(1)}
   })
 
 t3.from("nav ul li",{
@@ -172,7 +171,7 @@ abouts.forEach(scrollAbout =>{
     y:30,
     autoAlpha:0,
     duration:1,
-    ease: "back.out(1.7)",
+    ease: Back.easeOut.config(1),
     scrollTrigger:{
       trigger: ".scroll-about",
       start:"bottom 60%",

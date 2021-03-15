@@ -54,7 +54,7 @@ contactBtn.addEventListener("click",() =>{
 
 /*Overlay*/ 
 const t1 = gsap.timeline({
-  defaults: { duration: .7,     ease: "back.out(1.7)",},
+  defaults: { duration: .7, ease: Back.easeOut.config(1) },
 });
 
 const t2 = gsap.timeline({defaults: {duration: .1}});
@@ -119,8 +119,7 @@ burger.addEventListener("click", () => {
 
 window.onload = () =>{
   const t3 = gsap.timeline({
-    defaults: {     ease: "back.out(1.7)",
-  }
+    defaults: {  ease: Back.easeOut.config(1)}
   })
 
 t3.from("nav ul li",{
@@ -172,7 +171,7 @@ abouts.forEach(scrollAbout =>{
     y:30,
     autoAlpha:0,
     duration:1,
-    ease: "back.out(1.7)",
+    ease: Back.easeOut.config(1),
     scrollTrigger:{
       trigger: ".scroll-about",
       start:"bottom 60%",
@@ -198,23 +197,27 @@ gsap.from(".title",{
 
 /**Contact */
 
-  gsap.from(".contact__left-col",{
+const h3s = gsap.utils.toArray(".contact__left-col");
+h3s.forEach( h3 =>{
+  gsap.from(h3,{
     autoAlpha:0,
     duration:1.2,
-    ease: "back.out(1.7)",
+    ease: Back.easeOut.config(1),
+
     x:-20,
     scrollTrigger:{
     trigger: ".contact__left-col",
     start:"top 80%"
   }
   })
+})
 
 
 gsap.from(".contact-stagger",{
   stagger:.2,
   autoAlpha:0,
   y:30,
-  ease: "back.out(1.7)",
+  ease: Back.easeOut.config(1),
   duration:1,
   scrollTrigger:{
     trigger:".contact-stagger",
@@ -228,7 +231,7 @@ gsap.from(".contact-stagger2",{
   autoAlpha:0,
   ease:"power4.in",
   duration:.5,
-  ease: "back.out(1.7)",
+  ease: Back.easeOut.config(1),
   scrollTrigger:{
     trigger:".contact-stagger",
     start:"top 80%",
