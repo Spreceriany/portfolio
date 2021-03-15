@@ -174,8 +174,7 @@ abouts.forEach(scrollAbout =>{
     ease: Back.easeOut.config(1),
     scrollTrigger:{
       trigger: ".scroll-about",
-      start:"top 80%",
-      end:"+=300",
+     
     }
   })
 })
@@ -190,7 +189,7 @@ gsap.from(".title",{
   scrollTrigger:{
     trigger: ".title",
     start:"bottom 80%",
-    markers:true
+    
   }
 })
 
@@ -215,7 +214,7 @@ h3s.forEach( h3 =>{
 
 
 gsap.from(".contact-stagger",{
-  stagger:.3,
+  stagger:.2,
   autoAlpha:0,
   y:30,
   ease: Back.easeOut.config(1),

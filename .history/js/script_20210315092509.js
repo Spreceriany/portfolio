@@ -8,11 +8,13 @@ var flkty = new Flickity(elem, {
   cellAlign: "left",
   contain: true,
   wrapAround:true,
-  selectedAttraction: 0.03,
-  friction: 0.30
+  selectedAttraction: 0.015,
+friction: 0.25
 });
 
-
+const bodyOverflow = () =>{
+  body.style.overflow = "auto"
+}
 
 
 /*Smooth scroll for anchor tag*/
@@ -27,7 +29,7 @@ learnMoreBtn.addEventListener("click",() =>{
   t1.reverse(.5)
   t2.reverse()
 
-  body.style.overflow = "auto"
+  bodyOverflow()
 })
 
 
@@ -38,17 +40,18 @@ workBtn.addEventListener("click",() =>{
   scrollElement.scrollIntoView({behavior: "smooth", block: "start"})
   t1.reverse(.5)
   t2.reverse()
-  body.style.overflow = "auto"})
+  bodyOverflow()
+})
 
 
 const contactBtn = document.querySelector(".contact-link");
 const scrollElement3 = document.querySelector('#contact')
-
 contactBtn.addEventListener("click",() =>{
   scrollElement.scrollIntoView({behavior: "smooth", block: "end"})
   t1.reverse(.5)
   t2.reverse()
-  body.style.overflow = "auto"
+
+  bodyOverflow()
 })
 
 
@@ -107,7 +110,7 @@ t2.reversed(true)
 burger.addEventListener("click", () => {
   
   t2.reversed() ? t2.play() : t2.reverse()
-  t1.reversed() ? (t1.play(), body.style.overflow = "hidden") : (t1.reverse(.7),  body.style.overflow = "auto");
+  t1.reversed() ? (t1.play(),bodyOverflow()) : (t1.reverse(.7), bodyOverflow());
 });
 
 
@@ -174,7 +177,7 @@ abouts.forEach(scrollAbout =>{
     ease: Back.easeOut.config(1),
     scrollTrigger:{
       trigger: ".scroll-about",
-      start:"top 80%",
+      start:"bottom 50%",
       end:"+=300",
     }
   })
@@ -190,7 +193,7 @@ gsap.from(".title",{
   scrollTrigger:{
     trigger: ".title",
     start:"bottom 80%",
-    markers:true
+    
   }
 })
 
@@ -215,7 +218,7 @@ h3s.forEach( h3 =>{
 
 
 gsap.from(".contact-stagger",{
-  stagger:.3,
+  stagger:.2,
   autoAlpha:0,
   y:30,
   ease: Back.easeOut.config(1),

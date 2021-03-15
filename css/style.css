@@ -201,7 +201,7 @@ header nav ul li a {
 .hero {
   width: 100%;
   margin: 0 auto;
-  min-height: 80vh;
+  min-height: 90vh;
   background: radial-gradient(59.93% 44.1% at -11.63% 36.77%, #343434 0%, #111111 100%);
   -webkit-box-align: center;
       -ms-flex-align: center;

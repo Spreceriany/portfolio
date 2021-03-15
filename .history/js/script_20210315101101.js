@@ -176,6 +176,7 @@ abouts.forEach(scrollAbout =>{
       trigger: ".scroll-about",
       start:"top 80%",
       end:"+=300",
+      markers:true
     }
   })
 })
