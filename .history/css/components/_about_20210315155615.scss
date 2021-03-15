@@ -17,7 +17,7 @@
       h2 {
         font-family: "Chivo";
         @include clamping(2.5rem, 5vw, 6rem);
-        margin-bottom: 0.2em;
+        margin-bottom: 0.5em;
       }
       p{
         @include clamping(1.2rem, 3vw, 2rem);

@@ -376,7 +376,7 @@ header nav ul li a {
   font-size: clamp(1.2rem, 3vw, 2rem);
 }
 
-.about__left-col p:first-of-type {
+.about__left-col .lead {
   margin-bottom: .5em;
 }
 
@@ -548,6 +548,11 @@ header nav ul li a {
 
 .contact__left-col h3 {
   font-size: clamp(2rem, 5vw, 2.5rem);
+}
+
+.contact__left-col h6 {
+  font-size: clamp(0.7rem, 5vw, 1rem);
+  margin-bottom: 1em;
 }
 
 .contact__left-col .underline {
