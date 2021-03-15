@@ -165,31 +165,32 @@ t3.from("nav ul li",{
 
 /**About section */
 
-const abouts = gsap.utils.toArray(".scroll-about");
-abouts.forEach(scrollAbout =>{
-  gsap.from(scrollAbout,{
+
+ 
+
+  gsap.from(".scroll-about",{
     y:30,
     autoAlpha:0,
     duration:1,
     ease: Back.easeOut.config(1),
     scrollTrigger:{
       trigger: ".scroll-about",
-      start:"bottom 60%",
-      end:"+=300",
+      start:"top 80%",
+
     }
   })
-})
+
 
 /**Work */
 
-gsap.from(".title",{
+gsap.from(".title h2",{
   y:30,
   autoAlpha:0,
   duration:1.5,
   ease:"power1.out",
   scrollTrigger:{
-    trigger: ".title",
-    start:"bottom 80%",
+    trigger: ".title h2",
+    start:"top bottom"
   }
 })
 
@@ -214,7 +215,7 @@ h3s.forEach( h3 =>{
 
 
 gsap.from(".contact-stagger",{
-  stagger:.2,
+  stagger:.3,
   autoAlpha:0,
   y:30,
   ease: Back.easeOut.config(1),

@@ -174,7 +174,7 @@ abouts.forEach(scrollAbout =>{
     ease: Back.easeOut.config(1),
     scrollTrigger:{
       trigger: ".scroll-about",
-      start:"bottom 60%",
+      start:"bottom 60%%",
       end:"+=300",
     }
   })

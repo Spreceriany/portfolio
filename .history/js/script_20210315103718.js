@@ -185,7 +185,7 @@ abouts.forEach(scrollAbout =>{
 gsap.from(".title",{
   y:30,
   autoAlpha:0,
-  duration:1.5,
+  duration:3,
   ease:"power1.out",
   scrollTrigger:{
     trigger: ".title",
