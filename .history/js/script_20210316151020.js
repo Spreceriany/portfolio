@@ -127,7 +127,7 @@ t3.from("nav ul li",{
   stagger:.3,
   y:-20,
   autoAlpha:0,
-  delay:1.8
+  delay:1.5
 })
 
 .from(".burger",{
