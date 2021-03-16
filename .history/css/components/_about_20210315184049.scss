@@ -4,9 +4,9 @@
 
 .about {
     width: 100%;
-    padding-top: 3em;
+    padding: 3em 0;
     background-color: $more-black;
-    color: $white-ish;
+    color: $black;
     display: grid;
     @media(min-width:556px){
       background-color: $black;
@@ -21,9 +21,6 @@
       }
       p{
         @include clamping(1.2rem, 3vw, 2rem);
-        &:first-of-type{
-          margin-bottom: .5em;
-        }
       }
 
       .lead{

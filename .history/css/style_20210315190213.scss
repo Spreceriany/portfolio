@@ -62,13 +62,13 @@ main {
   left: 66.6%;
 }
 
-
-
 @media (prefers-color-scheme:dark){
   h1,h2,h3,p{
       filter: invert(1) hue-rotate(180);
   }
 }
 
-
+.orange-dot{
+  display: inline-block;
+}
 

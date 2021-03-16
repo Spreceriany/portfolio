@@ -55,14 +55,11 @@
         display: inline-block;
         right: 150px;
       }
-
-      .orange-dot{
-        display: inline-block;
-      }
-      
     }
 
-
+    .intro-stagger{
+      overflow: hidden;
+    }
     &__right-col {
       position: relative;
       

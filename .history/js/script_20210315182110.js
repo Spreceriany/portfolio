@@ -194,17 +194,6 @@ gsap.from(".title",{
   }
 })
 
-gsap.from(".carousel",{
-  y:30,
-  autoAlpha:0,
-  duration:1,
-  ease:"power1.out",
-  scrollTrigger:{
-    trigger: ".carousel",
-    start:"top 80%",
-  }
-})
-
 
 
 /**Contact */
@@ -268,19 +257,10 @@ gsap.to(".third",1.5,{
 
 /**Dark mode */
 
-const darkModeBtn = document.querySelector(".inverted")
+const darkModeBtn = document.querySelector(".language")
 
 darkModeBtn.addEventListener("click", () =>{
-  document.body.classList.toggle("invert")
-})
-
-/**Cursor */
-
-const cursor = document.querySelector(".cursor");
-document.addEventListener('mousemove', (e) =>{
-  cursor.style.left = e.pageX + 'px';
-  cursor.style.top = e.pageY + 'px';
-
+  document.body.classList.toggle("light-theme")
 })
 
 

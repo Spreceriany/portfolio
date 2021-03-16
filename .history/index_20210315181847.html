@@ -2,21 +2,11 @@
 <html lang="en">
 
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TC8WXD4DDH"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-TC8WXD4DDH');
-    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:image" content="img/favicon_io/apple-touch-icon.png">
-    <meta name="description" content = "Personal portfolio of front end developer Patrik Horny">
     <title>Patrik Horny | Portfolio</title>
-
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Asul&family=Chivo:wght@900&display=swap" rel="stylesheet">
@@ -36,32 +26,28 @@
 
     <div class="overlay">
         <ul>
-            <li>
-                <a href="#about" class="about-link ">
-                    About
-                </a>
-            </li>
-            <li>
-                 <a href="#work" class="work-link ">
-                    Work
-                </a>
-            </li>
-           
-            <li>
-                 <a href="#contact" class="contact-link ">
-                    Contact
-                </a>
-            </li>
-           
+            <a href="#about" class="about-link invert">
+                <li>About</li>
+            </a>
+            <a href="#work" class="work-link invert">
+                <li>Work</li>
+            </a>
+
+            <a href="#contact" class="contact-link invert">
+                <li>Contact</li>
+            </a>
+
+          
         </ul>
     </div>
     <header>
         <nav>
             <ul> 
                 <li><a href="#" class="language">EN</a></li>
-                <li><a href="#about" class="about-link ">About</a></li>
-                <li><a href="#work" class="work-link ">Work</a></li>
-                <li><a href="#contact" class="contact-link ">Contact</a></li>
+                <li><a href="#" class="language">SK</a></li>
+                <li><a href="#about" class="about-link invert">About</a></li>
+                <li><a href="#work" class="work-link invert">Work</a></li>
+                <li><a href="#contact" class="contact-link invert">Contact</a></li>
                
             </ul>
             <div class="burger">
@@ -85,7 +71,7 @@
 
             </div>
             <div class="hero__right-col">
-                <img src="./img/my_photo_color.png" class="my-photo inverted" alt="my-photo">
+                <img src="./img/my_photo_color.png" class="my-photo" alt="my-photo">
 
             </div>
         </section>
@@ -213,8 +199,8 @@
             </div>
 
         </section>
-
     </main>
+
 
 
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>

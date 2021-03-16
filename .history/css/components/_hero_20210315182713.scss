@@ -3,17 +3,12 @@
 
 .hero {
     width: 100%;
-  
     margin: 0 auto;
     min-height: 90vh;
     @media(min-width:556px){
       min-height: 100vh;
     }
-    background: radial-gradient(
-      59.93% 44.1% at -11.63% 36.77%,
-      #343434 0%,
-      #111111 100%
-    );
+    background: white;
     background-blend-mode: screen;
 
     @media(min-width:556px){
@@ -55,14 +50,11 @@
         display: inline-block;
         right: 150px;
       }
-
-      .orange-dot{
-        display: inline-block;
-      }
-      
     }
 
-
+    .intro-stagger{
+      overflow: hidden;
+    }
     &__right-col {
       position: relative;
       

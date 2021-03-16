@@ -203,6 +203,7 @@ header nav ul li a {
   margin: 0 auto;
   min-height: 90vh;
   background: radial-gradient(59.93% 44.1% at -11.63% 36.77%, #343434 0%, #111111 100%);
+  background-blend-mode: screen;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -276,8 +277,8 @@ header nav ul li a {
   right: 150px;
 }
 
-.hero .intro-stagger {
-  overflow: hidden;
+.hero__left-col .orange-dot {
+  display: inline-block;
 }
 
 .hero__right-col {
@@ -339,7 +340,7 @@ header nav ul li a {
 
 .about {
   width: 100%;
-  padding: 3em 0;
+  padding-top: 3em;
   background-color: #0d0d0d;
   color: #edf2f8;
   display: -ms-grid;
@@ -374,6 +375,10 @@ header nav ul li a {
 
 .about__left-col p {
   font-size: clamp(1.2rem, 3vw, 2rem);
+}
+
+.about__left-col p:first-of-type {
+  margin-bottom: .5em;
 }
 
 .about__left-col .lead {
@@ -785,25 +790,18 @@ header nav ul li a {
     text-decoration: none;
     font-family: "Chivo";
     text-transform: uppercase;
-    text-align: center;
+    color: #edf2f8;
   }
   .overlay ul li {
-    color: #fff;
     font-size: 3rem;
     padding: .2em 0;
+    text-align: center;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .overlay {
     display: none;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  h1, h2, h3, p {
-    -webkit-filter: invert(1) hue-rotate(180);
-            filter: invert(1) hue-rotate(180);
   }
 }
 
@@ -861,9 +859,5 @@ main {
     -webkit-filter: invert(1) hue-rotate(180);
             filter: invert(1) hue-rotate(180);
   }
-}
-
-.orange-dot {
-  display: inline-block;
 }
 /*# sourceMappingURL=style.css.map */

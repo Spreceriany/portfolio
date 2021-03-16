@@ -71,4 +71,19 @@ main {
 }
 
 
+.cursor{
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: $white-ish;
+  transition: .1s;
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+
+ul li:hover ~ .cursor{
+  transform:scale(5)
+}
 

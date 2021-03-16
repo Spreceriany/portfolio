@@ -201,7 +201,7 @@ gsap.from(".carousel",{
   ease:"power1.out",
   scrollTrigger:{
     trigger: ".carousel",
-    start:"top 80%",
+    start:"top 70%",
   }
 })
 
@@ -272,15 +272,6 @@ const darkModeBtn = document.querySelector(".inverted")
 
 darkModeBtn.addEventListener("click", () =>{
   document.body.classList.toggle("invert")
-})
-
-/**Cursor */
-
-const cursor = document.querySelector(".cursor");
-document.addEventListener('mousemove', (e) =>{
-  cursor.style.left = e.pageX + 'px';
-  cursor.style.top = e.pageY + 'px';
-
 })
 
 

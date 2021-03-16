@@ -1,0 +1,14 @@
+body.dark-theme{
+    background: #111010;
+  }
+
+body.dark-theme .hero{
+    background: radial-gradient(
+        59.93% 44.1% at -11.63% 36.77%,
+        #343434 0%,
+        #111111 100%
+      );
+      @media(min-width:556px){
+        background:$black;
+      }
+}  
