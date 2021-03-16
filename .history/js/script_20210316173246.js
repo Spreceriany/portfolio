@@ -108,57 +108,11 @@ window.onload = (x) => {
   });
   if(mediaQuery.matches){
     t3.from("nav ul li", {
-      stagger: 0.3,
-      y: -20,
-      autoAlpha: 0,
-      delay: 1,
-    })
-    .from(".burger", {
-      autoAlpha: 0,
-    })
-
-    .from(
-      ".intro-stagger",
-      {
-        stagger: 0.3,
-        y: 20,
-        skewX: 10,
-        autoAlpha: 0,
-      },
-      "-=1"
-    )
-
-    .from(
-      ".btn",
-      {
-        autoAlpha: 0,
-      },
-      "-=.2"
-    )
-
-    .to(
-      ".orange-dot",
-      {
-        y: -20,
-      },
-      "+=.5"
-    )
-
-    .to(".orange-dot", {
-      y: 0,
-      ease: "bounce.out",
-    })
-
-    .from(
-      ".my-photo",
-      {
-        autoAlpha: 0,
-        x: 20,
-        duration: 1.5,
-      },
-      "-=2.5"
-    );
-   
+    stagger: 0.3,
+    y: -20,
+    autoAlpha: 0,
+    delay: 1,
+  })
   } else{
     t3.from("nav ul li", {
       stagger: 0.3,

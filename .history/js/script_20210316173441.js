@@ -111,7 +111,7 @@ window.onload = (x) => {
       stagger: 0.3,
       y: -20,
       autoAlpha: 0,
-      delay: 1,
+      delay: 1.2,
     })
     .from(".burger", {
       autoAlpha: 0,
