@@ -249,7 +249,7 @@ abouts.forEach((scrollAbout) => {
 gsap.from(".title", {
   y: 30,
   autoAlpha: 0,
-  duration: 1,
+  duration: 1.5,
   ease: "power1.out",
   scrollTrigger: {
     trigger: ".title",
@@ -257,18 +257,16 @@ gsap.from(".title", {
   },
 });
 
-
-gsap.from(".swiper-container",{
-  y:30,
-  autoAlpha:0,
-  duration:1,
-  ease:"power1.out",
-  scrollTrigger:{
-    trigger: ".swiper-container",
-
-    start:"top 80%"
-  }
-})
+gsap.from(".carousel", {
+  y: 30,
+  autoAlpha: 0,
+  duration: 1,
+  ease: "power1.out",
+  scrollTrigger: {
+    trigger: ".carousel",
+    start: "top 80%",
+  },
+});
 
 /**Contact */
 
