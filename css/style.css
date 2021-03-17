@@ -645,7 +645,7 @@ header nav ul li a {
 }
 
 .swiper-button-next:focus, .swiper-button-prev:focus {
-  outline: thin dotted;
+  outline-color: #b5b5b5;
 }
 
 .swiper-button-next:hover, .swiper-button-prev:hover {

@@ -18,7 +18,11 @@
   margin: 0 1em;
   transition: color .3s ease;
   &:focus{
-   outline-color: $gray;
+    @media(max-width:996px{
+          outline:none;
+
+    }
+    outline: thin dotted;
   }        
   
   &:hover{
