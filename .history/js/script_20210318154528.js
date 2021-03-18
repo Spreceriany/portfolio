@@ -115,10 +115,16 @@ window.onload = (x) => {
     defaults: { ease: "back.out(1.7)" },
   });
   if(mediaQuery.matches){
-    t3
+    t3.from("nav ul li", {
+      stagger: 0.2,
+      y: -20,
+      duration:.3,
+      autoAlpha: 0,
+      delay: 1,
+    })
     .from(".burger", {
       autoAlpha: 0,
-    },"+=1.65")
+    })
 
     .from(
       ".intro-stagger",
@@ -164,10 +170,10 @@ window.onload = (x) => {
    
   } else{
     t3.from("nav ul li", {
-      stagger: 0.2,
+      stagger: 0.3,
       y: -20,
       autoAlpha: 0,
-      delay: 1.5,
+      delay: 1.8,
     })
     .from(".burger", {
       autoAlpha: 0,
@@ -181,7 +187,7 @@ window.onload = (x) => {
         skewX: 10,
         autoAlpha: 0,
       },
-      "-=1.5"
+      "-=1"
     )
 
     .from(

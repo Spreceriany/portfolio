@@ -118,7 +118,7 @@ window.onload = (x) => {
     t3
     .from(".burger", {
       autoAlpha: 0,
-    },"+=1.65")
+    },"+=1.6")
 
     .from(
       ".intro-stagger",
@@ -181,7 +181,7 @@ window.onload = (x) => {
         skewX: 10,
         autoAlpha: 0,
       },
-      "-=1.5"
+      "-=1"
     )
 
     .from(
