@@ -319,6 +319,13 @@ header nav ul li a {
           filter: saturate(1);
 }
 
+@media (min-width: 556px) and (max-width: 1040px) {
+  .hero__right-col img {
+    background-position: 100% 56%;
+    background-size: 66%;
+  }
+}
+
 @media (min-width: 556px) {
   .hero__right-col img {
     max-width: 90%;
