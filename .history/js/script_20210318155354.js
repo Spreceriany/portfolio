@@ -287,7 +287,7 @@ gsap.from(
     duration: 1,
     scrollTrigger: {
       trigger: ".contact-stagger",
-      start: "top 85%",
+      start: "top 80%",
     },
   },
   "-=1"
