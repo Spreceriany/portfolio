@@ -265,7 +265,7 @@ header nav ul li a {
   font-size: clamp(1.2rem, 3vw, 2rem);
 }
 
-.hero__left-col h2 {
+.hero__left-col h1 {
   font-size: clamp(2.5rem, 5vw, 6rem);
   margin-bottom: 0.1em;
   letter-spacing: 0.03em;
@@ -373,11 +373,11 @@ header nav ul li a {
   margin-bottom: 0.2em;
 }
 
-.about__left-col p, .about__left-col h1 {
+.about__left-col p {
   font-size: clamp(1.2rem, 3vw, 2rem);
 }
 
-.about__left-col p:first-of-type, .about__left-col h1:first-of-type {
+.about__left-col p:first-of-type {
   margin-bottom: .5em;
 }
 
