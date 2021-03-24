@@ -15,13 +15,15 @@
       background: $black;
     }
 
+   
+  
+    
     &__left-col{ 
       font-family: 'Asul';
       padding: 0em 2em;
    
       h3{
         @include clamping(2rem, 5vw, 2.5rem);
-        font-family: 'Asul';
       }
 
       h6{
@@ -100,6 +102,8 @@
         }
       }
 
-     
+      h3{
+        font-family: 'Chivo';
+      }
     }
   }
