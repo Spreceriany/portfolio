@@ -1,23 +1,22 @@
 gsap.registerPlugin(ScrollTrigger);
 
-const swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper(".swiper-container", {
   // Optional parameters
   slidesPerView: 1.3,
   loop: true,
   grabCursor: true,
-  freeModeMomentumRatio:2,
-  
+  freeModeMomentumRatio: 2,
+
   keyboard: {
     enabled: true,
   },
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 
   // And if we need scrollbar
- 
 });
 
 /*Smooth scroll for anchor tag*/
@@ -56,7 +55,7 @@ contactBtn.addEventListener("click", () => {
 
 /*Overlay*/
 const t1 = gsap.timeline({
-  defaults: { duration: 0.7, ease: "back.out(1.7)" },
+  defaults: { duration: 0.7, ease: "power2.inOut" },
 });
 
 const t2 = gsap.timeline({ defaults: { duration: 0.1 } });
@@ -67,21 +66,24 @@ const body = document.querySelector("body");
 t1.paused(true);
 t1.to(".overlay", {
   x: 0,
-})
-.from(".overlay ul a", {
-  autoAlpha: 0,
-  y: -20,
-  duration:.7,
-  ease: "power2.inOut",
-  stagger:.1
-},"-=.1");
+}).from(
+  ".overlay ul a",
+  {
+    autoAlpha: 0,
+    y: -20,
+    duration: 0.7,
+    ease: "power2.inOut",
+    stagger: 0.1,
+  },
+  "-=.4"
+);
 
 t1.reversed(true);
 t2.paused(true);
 t2.to(".line1", {
   rotation: 45,
   y: 8,
-  duration: 0.1,
+  duration: 0.05,
   backgroundColor: "#b5b5b5",
 })
 
@@ -96,7 +98,7 @@ t2.to(".line1", {
     x: -3,
     y: -8,
     width: "80%",
-    duration: 0.1,
+
     backgroundColor: "#b5b5b5",
   });
 
@@ -109,117 +111,115 @@ burger.addEventListener("click", () => {
 });
 
 /**hero section with header*/
-const mediaQuery = window.matchMedia("(max-width:556px)")
+const mediaQuery = window.matchMedia("(max-width:556px)");
 window.onload = (x) => {
   const t3 = gsap.timeline({
     defaults: { ease: "back.out(1.7)" },
   });
-  if(mediaQuery.matches){
-    t3
-    .from(".burger", {
-      autoAlpha: 0,
-    },"+=1.65")
-
-    .from(
-      ".intro-stagger",
-      {
-        stagger: 0.3,
-        y: 20,
-        skewX: 10,
-        autoAlpha: 0,
-      },
-      "-=1"
-    )
-
-    .from(
-      ".btn",
+  if (mediaQuery.matches) {
+    t3.from(
+      ".burger",
       {
         autoAlpha: 0,
       },
-      "-=.2"
+      "+=1.65"
     )
 
-    .to(
-      ".orange-dot",
-      {
-        y: -20,
-      },
-      "+=.5"
-    )
+      .from(
+        ".intro-stagger",
+        {
+          stagger: 0.3,
+          y: 20,
+          skewX: 10,
+          autoAlpha: 0,
+        },
+        "-=1"
+      )
 
-    .to(".orange-dot", {
-      y: 0,
-      ease: "bounce.out",
-    })
+      .from(
+        ".btn",
+        {
+          autoAlpha: 0,
+        },
+        "-=.2"
+      )
 
-    .from(
-      ".my-photo",
-      {
-        autoAlpha: 0,
-        x: 20,
-        duration: 1.5,
-      },
-      "-=2.5"
-    );
-   
-  } else{
+      .to(
+        ".orange-dot",
+        {
+          y: -20,
+        },
+        "+=.5"
+      )
+
+      .to(".orange-dot", {
+        y: 0,
+        ease: "bounce.out",
+      })
+
+      .from(
+        ".my-photo",
+        {
+          autoAlpha: 0,
+          x: 20,
+          duration: 1.5,
+        },
+        "-=2.5"
+      );
+  } else {
     t3.from("nav ul li", {
       stagger: 0.2,
       y: -20,
       autoAlpha: 0,
       delay: 1.5,
     })
-    .from(".burger", {
-      autoAlpha: 0,
-    })
-
-    .from(
-      ".intro-stagger",
-      {
-        stagger: 0.3,
-        y: 20,
-        skewX: 10,
+      .from(".burger", {
         autoAlpha: 0,
-      },
-      "-=1.5"
-    )
+      })
 
-    .from(
-      ".btn",
-      {
-        autoAlpha: 0,
-      },
-      "-=.2"
-    )
+      .from(
+        ".intro-stagger",
+        {
+          stagger: 0.3,
+          y: 20,
+          skewX: 10,
+          autoAlpha: 0,
+        },
+        "-=1.5"
+      )
 
-    .to(
-      ".orange-dot",
-      {
-        y: -20,
-      },
-      "+=.5"
-    )
+      .from(
+        ".btn",
+        {
+          autoAlpha: 0,
+        },
+        "-=.2"
+      )
 
-    .to(".orange-dot", {
-      y: 0,
-      ease: "bounce.out",
-    })
+      .to(
+        ".orange-dot",
+        {
+          y: -20,
+        },
+        "+=.5"
+      )
 
-    .from(
-      ".my-photo",
-      {
-        autoAlpha: 0,
-        x: 20,
-        duration: 1.5,
-      },
-      "-=2.5"
-    );
+      .to(".orange-dot", {
+        y: 0,
+        ease: "bounce.out",
+      })
+
+      .from(
+        ".my-photo",
+        {
+          autoAlpha: 0,
+          x: 20,
+          duration: 1.5,
+        },
+        "-=2.5"
+      );
   }
-  
-
-    
 };
-
 
 /**About section */
 
@@ -251,18 +251,17 @@ gsap.from(".title", {
   },
 });
 
-
-gsap.from(".swiper-container",{
-  y:30,
-  autoAlpha:0,
-  duration:1,
-  ease:"power1.out",
-  scrollTrigger:{
+gsap.from(".swiper-container", {
+  y: 30,
+  autoAlpha: 0,
+  duration: 1,
+  ease: "power1.out",
+  scrollTrigger: {
     trigger: ".swiper-container",
 
-    start:"top 80%"
-  }
-})
+    start: "top 80%",
+  },
+});
 
 /**Contact */
 
