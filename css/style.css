@@ -89,7 +89,7 @@ header nav .burger {
   cursor: pointer;
   margin-right: 2em;
   z-index: 4;
-  padding: .7em .6em .6em .4em;
+  padding: 0.7em 0.6em 0.6em 0.4em;
   border: 0px solid red;
   border-radius: 50%;
   position: relative;
@@ -104,10 +104,10 @@ header nav .burger {
 header nav .burger div {
   background-color: #c92300;
   margin: 0.3em;
-  -webkit-transition: opacity 500ms ease, width 500ms ease, -webkit-transform 500ms ease;
-  transition: opacity 500ms ease, width 500ms ease, -webkit-transform 500ms ease;
-  transition: transform 500ms ease, opacity 500ms ease, width 500ms ease;
-  transition: transform 500ms ease, opacity 500ms ease, width 500ms ease, -webkit-transform 500ms ease;
+  -webkit-transition: opacity 250ms ease, width 250ms ease, -webkit-transform 250ms ease;
+  transition: opacity 250ms ease, width 250ms ease, -webkit-transform 250ms ease;
+  transition: transform 250ms ease, opacity 250ms ease, width 250ms ease;
+  transition: transform 250ms ease, opacity 250ms ease, width 250ms ease, -webkit-transform 250ms ease;
 }
 
 header nav .burger div:nth-child(1) {
@@ -138,7 +138,7 @@ header nav svg {
 header nav .circle {
   stroke: #b5b5b5;
   stroke-width: 0;
-  padding-left: .05em;
+  padding-left: 0.05em;
 }
 
 header nav ul {
@@ -186,6 +186,7 @@ header nav ul li a {
   text-decoration: none;
   color: #edf2f8;
   letter-spacing: 0.1em;
+  display: inline-block;
   -webkit-transition: color 0.3s ease-out;
   transition: color 0.3s ease-out;
 }
@@ -348,7 +349,7 @@ header nav ul li a {
 .about {
   width: 100%;
   padding-top: 3em;
-  background-color: #0d0d0d;
+  background-color: #ffffff;
   color: #edf2f8;
   display: -ms-grid;
   display: grid;
@@ -499,7 +500,7 @@ header nav ul li a {
   color: #edf2f8;
   display: -ms-grid;
   display: grid;
-  background: #0d0d0d;
+  background: #ffffff;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   position: relative;
@@ -828,24 +829,31 @@ main {
 }
 
 .first {
-  background: #0d0d0d;
+  background: #ffffff;
   left: 0%;
 }
 
 .second {
-  background: #0d0d0d;
+  background: #ffffff;
   left: 33.3%;
 }
 
 .third {
-  background: #0d0d0d;
+  background: #ffffff;
   left: 66.6%;
 }
 
 @media (prefers-color-scheme: dark) {
-  h1, h2, h3, p {
+  h1,
+  h2,
+  h3,
+  p {
     -webkit-filter: invert(1) hue-rotate(180);
             filter: invert(1) hue-rotate(180);
   }
+}
+
+.swiper-wrapper {
+  overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */
