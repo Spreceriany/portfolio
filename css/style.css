@@ -448,11 +448,11 @@ header nav ul li a {
 .work small {
   display: block;
   color: #b5b5b5;
-  font-size: clamp(0.8rem, 3vw, 1.5rem);
+  font-size: clamp(0.5rem, 3vw, 1.5rem);
 }
 
 .work h3 {
-  font-size: clamp(1.7rem, 5vw, 4rem);
+  font-size: clamp(1rem, 5vw, 4rem);
   color: #edf2f8;
   overflow: hidden;
   background: -webkit-gradient(linear, left top, right top, from(#c92300), color-stop(50%, #c92300), color-stop(50%, #edf2f8));
@@ -465,6 +465,12 @@ header nav ul li a {
   -webkit-transition: background-position 275ms ease;
   transition: background-position 275ms ease;
   text-decoration: none;
+}
+
+@media(max-width:556px){
+  .work h3{
+    padding-top: 0.5rem;
+  }
 }
 
 .work h3:hover {

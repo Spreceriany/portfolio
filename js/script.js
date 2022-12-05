@@ -2,7 +2,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const swiper = new Swiper(".swiper-container", {
   // Optional parameters
-  slidesPerView: 1.3,
+  slidesPerView: 2.3,
   loop: true,
   grabCursor: true,
   freeModeMomentumRatio: 2,
