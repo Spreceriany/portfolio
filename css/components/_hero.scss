@@ -77,18 +77,16 @@
         width: 70%;
         right: 0;
         bottom: 0;
+        left: 0;
         filter: saturate(0);
         background-image: url("/img/comic-dots.svg");
         background-size: 60%;
         background-repeat: no-repeat;
-        background-position: 100% 65%;
-        transition: filter .5s ease;
-        &:hover{
-          filter:saturate(1)
-        }
+        background-position: 100% 100%;
+      
 
         @media(min-width:556px) and (max-width:1040px){
-          background-position: 100% 56%;
+          background-position: 100% 100%;
           background-size: 66%;
 
         }

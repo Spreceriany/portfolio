@@ -13,7 +13,7 @@
   border-radius: 9999px;
   width: 10em;
   -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -22,21 +22,22 @@
   margin: 1em 0;
   font-size: clamp(0.8rem, 3vw, 1.2rem);
   border: 1px solid #c92300;
-  -webkit-transition: background-color .3s ease,-webkit-transform .3s ease-in;
-  transition: background-color .3s ease,-webkit-transform .3s ease-in;
-  transition: background-color .3s ease,transform .3s ease-in;
-  transition: background-color .3s ease,transform .3s ease-in,-webkit-transform .3s ease-in;
+  -webkit-transition: background-color 0.3s ease, -webkit-transform 0.3s ease-in;
+  transition: background-color 0.3s ease, -webkit-transform 0.3s ease-in;
+  transition: background-color 0.3s ease, transform 0.3s ease-in;
+  transition: background-color 0.3s ease, transform 0.3s ease-in,
+    -webkit-transform 0.3s ease-in;
 }
 
 .btn:hover {
   background-color: transparent;
   -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 @media (min-width: 556px) {
   .btn {
-    padding: 1em .5em;
+    padding: 1em 0.5em;
   }
 }
 
@@ -68,8 +69,8 @@ header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   z-index: 2;
 }
 
@@ -79,8 +80,8 @@ header nav {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   top: 0;
   right: 0;
 }
@@ -89,7 +90,7 @@ header nav .burger {
   cursor: pointer;
   margin-right: 2em;
   z-index: 4;
-  padding: .7em .6em .6em .4em;
+  padding: 0.7em 0.6em 0.6em 0.4em;
   border: 0px solid red;
   border-radius: 50%;
   position: relative;
@@ -104,10 +105,12 @@ header nav .burger {
 header nav .burger div {
   background-color: #c92300;
   margin: 0.3em;
-  -webkit-transition: opacity 500ms ease, width 500ms ease, -webkit-transform 500ms ease;
+  -webkit-transition: opacity 500ms ease, width 500ms ease,
+    -webkit-transform 500ms ease;
   transition: opacity 500ms ease, width 500ms ease, -webkit-transform 500ms ease;
   transition: transform 500ms ease, opacity 500ms ease, width 500ms ease;
-  transition: transform 500ms ease, opacity 500ms ease, width 500ms ease, -webkit-transform 500ms ease;
+  transition: transform 500ms ease, opacity 500ms ease, width 500ms ease,
+    -webkit-transform 500ms ease;
 }
 
 header nav .burger div:nth-child(1) {
@@ -138,7 +141,7 @@ header nav svg {
 header nav .circle {
   stroke: #b5b5b5;
   stroke-width: 0;
-  padding-left: .05em;
+  padding-left: 0.05em;
 }
 
 header nav ul {
@@ -163,7 +166,13 @@ header nav ul li {
 header nav ul li:last-of-type {
   border: 2px solid #c92300;
   border-radius: 9999px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#c92300), to(#c92300));
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#c92300),
+    to(#c92300)
+  );
   background-image: linear-gradient(#c92300, #c92300);
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -202,17 +211,21 @@ header nav ul li a {
   width: 100%;
   margin: 0 auto;
   min-height: 90vh;
-  background: radial-gradient(59.93% 44.1% at -11.63% 36.77%, #343434 0%, #111111 100%);
+  background: radial-gradient(
+    59.93% 44.1% at -11.63% 36.77%,
+    #343434 0%,
+    #111111 100%
+  );
   background-blend-mode: screen;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: #edf2f8;
   position: relative;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
 }
 
 @media (min-width: 556px) {
@@ -230,7 +243,7 @@ header nav ul li a {
 @media (min-width: 556px) {
   .hero {
     -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -240,8 +253,8 @@ header nav ul li a {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   padding-left: 2em;
   padding-top: 4em;
 }
@@ -288,11 +301,11 @@ header nav ul li a {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   width: 100%;
   height: 100%;
 }
@@ -302,21 +315,13 @@ header nav ul li a {
   width: 70%;
   right: 0;
   bottom: 0;
+  left: 0;
   -webkit-filter: saturate(0);
-          filter: saturate(0);
+  filter: saturate(0);
   background-image: url("/img/comic-dots.svg");
   background-size: 60%;
   background-repeat: no-repeat;
-  background-position: 100% 65%;
-  -webkit-transition: -webkit-filter .5s ease;
-  transition: -webkit-filter .5s ease;
-  transition: filter .5s ease;
-  transition: filter .5s ease, -webkit-filter .5s ease;
-}
-
-.hero__right-col img:hover {
-  -webkit-filter: saturate(1);
-          filter: saturate(1);
+  background-position: 100% 100%;
 }
 
 @media (min-width: 556px) and (max-width: 1040px) {
@@ -330,10 +335,16 @@ header nav ul li a {
   .hero__right-col img {
     max-width: 90%;
     -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
     height: 80%;
     left: 0;
     right: auto;
+  }
+}
+@media (max-width: 375px) {
+  .hero__right-col img {
+    max-width: 90%;
+    width: 50%;
   }
 }
 
@@ -354,7 +365,7 @@ header nav ul li a {
   display: grid;
   display: grid;
   -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
 }
 
 @media (min-width: 556px) {
@@ -366,7 +377,7 @@ header nav ul li a {
 @media (min-width: 556px) {
   .about {
     -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -385,11 +396,11 @@ header nav ul li a {
 }
 
 .about__left-col p:first-of-type {
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 .about__left-col .lead {
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 .about__left-col .bold {
@@ -414,7 +425,7 @@ header nav ul li a {
 .work h2 {
   color: #edf2f8;
   font-family: "Chivo";
-  padding-bottom: .5em;
+  padding-bottom: 0.5em;
   font-size: clamp(2.5rem, 5vw, 6rem);
 }
 
@@ -431,18 +442,18 @@ header nav ul li a {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .work img {
   width: 80%;
   height: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   position: relative;
   -webkit-filter: drop-shadow(-9px 10px 24px #202020);
-          filter: drop-shadow(-9px 10px 24px #202020);
+  filter: drop-shadow(-9px 10px 24px #202020);
 }
 
 .work small {
@@ -455,7 +466,14 @@ header nav ul li a {
   font-size: clamp(1rem, 5vw, 4rem);
   color: #edf2f8;
   overflow: hidden;
-  background: -webkit-gradient(linear, left top, right top, from(#c92300), color-stop(50%, #c92300), color-stop(50%, #edf2f8));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#c92300),
+    color-stop(50%, #c92300),
+    color-stop(50%, #edf2f8)
+  );
   background: linear-gradient(to right, #c92300, #c92300 50%, #edf2f8 50%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -467,8 +485,8 @@ header nav ul li a {
   text-decoration: none;
 }
 
-@media(max-width:556px){
-  .work h3{
+@media (max-width: 556px) {
+  .work h3 {
     padding-top: 0.5rem;
   }
 }
@@ -477,7 +495,8 @@ header nav ul li a {
   background-position: 0 100%;
 }
 
-.work h3, .work small {
+.work h3,
+.work small {
   position: absolute;
   margin-top: 1.5em;
   top: 74%;
@@ -485,7 +504,8 @@ header nav ul li a {
 }
 
 @media (min-width: 1000px) {
-  .work h3, .work small {
+  .work h3,
+  .work small {
     margin-top: 0.8em;
   }
 }
@@ -507,26 +527,26 @@ header nav ul li a {
   display: grid;
   background: #0d0d0d;
   -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
   position: relative;
 }
 
 @media (min-width: 556px) {
   .contact {
     -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     background: #121212;
   }
 }
 
 .contact__left-col {
-  font-family: 'Asul';
+  font-family: "Asul";
   padding: 0em 2em;
 }
 
 .contact__left-col h3 {
   font-size: clamp(2rem, 5vw, 2.5rem);
-  font-family: 'Asul';
+  font-family: "Asul";
 }
 
 .contact__left-col h6 {
@@ -549,14 +569,14 @@ header nav ul li a {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   padding: 0em 2em;
 }
 
 .contact__right-col small {
   font-size: clamp(0.9rem, 3vw, 1.5rem);
-  margin-bottom: .2em;
+  margin-bottom: 0.2em;
 }
 
 .contact__right-col svg {
@@ -571,13 +591,14 @@ header nav ul li a {
   -webkit-transition: stroke 0.3s, -webkit-transform 0.3s ease-in;
   transition: stroke 0.3s, -webkit-transform 0.3s ease-in;
   transition: stroke 0.3s, transform 0.3s ease-in;
-  transition: stroke 0.3s, transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  transition: stroke 0.3s, transform 0.3s ease-in,
+    -webkit-transform 0.3s ease-in;
 }
 
 .contact__right-col svg:hover {
   stroke: #c92300 !important;
   -webkit-transform: translateY(-4px);
-          transform: translateY(-4px);
+  transform: translateY(-4px);
 }
 
 .contact__right-col ul {
@@ -607,7 +628,14 @@ header nav ul li a {
   position: relative;
   color: #c92300;
   overflow: hidden;
-  background: -webkit-gradient(linear, left top, right top, from(#c92300), color-stop(50%, #c92300), color-stop(50%, #edf2f8));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#c92300),
+    color-stop(50%, #c92300),
+    color-stop(50%, #edf2f8)
+  );
   background: linear-gradient(to right, #c92300, #c92300 50%, #edf2f8 50%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -617,7 +645,7 @@ header nav ul li a {
   -webkit-transition: background-position 275ms ease;
   transition: background-position 275ms ease;
   text-decoration: none;
-  font-family: 'Chivo';
+  font-family: "Chivo";
 }
 
 .contact__right-col a:hover {
@@ -642,36 +670,41 @@ header nav ul li a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   width: 69%;
   height: 100%;
 }
 
-.swiper-button-next, .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
   top: 5% !important;
   margin: 0 1em;
-  -webkit-transition: color .3s ease;
-  transition: color .3s ease;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
-.swiper-button-next:focus, .swiper-button-prev:focus {
+.swiper-button-next:focus,
+.swiper-button-prev:focus {
   outline-color: #b5b5b5;
 }
 
-.swiper-button-next:hover, .swiper-button-prev:hover {
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
   color: #c92300 !important;
 }
 
-.swiper-button-next::after, .swiper-button-prev::after {
+.swiper-button-next::after,
+.swiper-button-prev::after {
   font-size: 2rem !important;
 }
 
 @media (max-width: 687px) {
-  .swiper-button-next::after, .swiper-button-prev::after {
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
     font-size: 1rem !important;
   }
 }
@@ -685,8 +718,8 @@ header nav ul li a {
 }
 
 .block-image {
-  -webkit-transition: opacity .3s ease;
-  transition: opacity .3s ease;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
   width: 100%;
   height: auto;
 }
@@ -719,20 +752,20 @@ header nav ul li a {
   padding: 1em 1.5em;
   text-align: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   left: 41%;
   font-family: "Chivo";
   font-size: 1.2rem;
   top: 40%;
   left: 40%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 @media (max-width: 556px) {
   .block:hover::before {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -760,14 +793,14 @@ header nav ul li a {
     background-color: #121212;
     overflow: hidden;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     z-index: 2;
     -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    transform: translateX(100%);
   }
   .overlay .close {
     position: absolute;
@@ -788,7 +821,7 @@ header nav ul li a {
   }
   .overlay ul li {
     font-size: 3rem;
-    padding: .2em 0;
+    padding: 0.2em 0;
     text-align: center;
   }
 }
@@ -813,7 +846,7 @@ html {
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
@@ -849,9 +882,12 @@ main {
 }
 
 @media (prefers-color-scheme: dark) {
-  h1, h2, h3, p {
+  h1,
+  h2,
+  h3,
+  p {
     -webkit-filter: invert(1) hue-rotate(180);
-            filter: invert(1) hue-rotate(180);
+    filter: invert(1) hue-rotate(180);
   }
 }
 /*# sourceMappingURL=style.css.map */
